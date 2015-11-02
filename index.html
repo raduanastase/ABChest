@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Letters and Numbers</title>
+    <script src="res/jquery-2.1.4.min.js"></script>
+    <script src="res/sounds.js"></script>
+    <script src="res/Dictionary.js"></script>
+    <script src="res/SoundPlayer.js"></script>
+    <script src="main.js"></script>
+    <style>
+		@font-face {
+		  font-family: 'NoTo';
+		  src: url('res/fonts/NotoSans-Regular.ttf')  format('truetype')
+		}
+		body {
+		  font-family: 'NoTo', sans-serif;
+		}
+        #symbol {
+            width: 100%;
+            text-align: center;
+            font-size: 450px;
+        }
+
+        #pictureContainer {
+            width: 100%;
+            text-align: center;
+        }
+
+        .picture {
+            height: 350px;
+        }
+        #loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('res/images/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+        }
+    </style>
+</head>
+<body>
+<div id="loader"></div>
+
+
+<div id="symbol">...</div>
+<div id="pictureContainer">
+	<div class="pictureContainer" id="pictureContainerA">
+    	<img class="picture" src="res\pictures\a.jpg"/>
+    	<img class="picture" src="res\pictures\a1.jpg"/>
+    	<img class="picture" src="res\pictures\a2.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerB">
+		<img class="picture" src="res\pictures\b.jpg"/>
+		<img class="picture" src="res\pictures\b1.jpg"/>
+		<img class="picture" src="res\pictures\b2.jpg"/>
+		<img class="picture" src="res\pictures\b3.jpg"/>
+		<img class="picture" src="res\pictures\b4.jpg"/>
+		<img class="picture" src="res\pictures\b5.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerC">
+		<img class="picture" src="res\pictures\c.jpg"/>
+		<img class="picture" src="res\pictures\c1.jpg"/>
+		<img class="picture" src="res\pictures\c2.jpg"/>
+		<img class="picture" src="res\pictures\c3.jpg"/>
+		<img class="picture" src="res\pictures\c4.jpg"/>
+		<img class="picture" src="res\pictures\c5.jpg"/>
+		<img class="picture" src="res\pictures\c6.jpg"/>
+		<img class="picture" src="res\pictures\c7.jpg"/>
+		<img class="picture" src="res\pictures\c8.jpg"/>
+		<img class="picture" src="res\pictures\c9.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerD">
+		<img class="picture" src="res\pictures\d.jpg"/>
+		<img class="picture" src="res\pictures\d1.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerE">
+		<img class="picture" src="res\pictures\e.png"/>
+		<img class="picture" src="res\pictures\e1.jpg"/>
+		<img class="picture" src="res\pictures\e2.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerF">
+		<img class="picture" src="res\pictures\f.jpg"/>
+		<img class="picture" src="res\pictures\f1.jpg"/>
+		<img class="picture" src="res\pictures\f2.jpg"/>
+		<img class="picture" src="res\pictures\f3.png"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerG">
+		<img class="picture" src="res\pictures\g.jpg"/>
+		<img class="picture" src="res\pictures\g1.jpg"/>
+		<img class="picture" src="res\pictures\g2.jpg"/>
+		<img class="picture" src="res\pictures\g3.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerH">
+		<img class="picture" src="res\pictures\h.jpg"/>
+		<img class="picture" src="res\pictures\h1.jpg"/>
+		<img class="picture" src="res\pictures\h2.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerI">
+		<img class="picture" src="res\pictures\i.jpg"/>
+		<img class="picture" src="res\pictures\i1.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerJ">
+		<img class="picture" src="res\pictures\j.jpg"/>
+		<img class="picture" src="res\pictures\j1.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerK">
+		<img class="picture" src="res\pictures\k.jpg"/>
+		<img class="picture" src="res\pictures\k1.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerL">
+		<img class="picture" src="res\pictures\l.jpg"/>
+		<img class="picture" src="res\pictures\l1.jpg"/>
+		<img class="picture" src="res\pictures\l2.jpg"/>
+		<img class="picture" src="res\pictures\l3.jpg"/>
+		<img class="picture" src="res\pictures\l4.jpg"/>
+		<img class="picture" src="res\pictures\l5.jpg"/>
+		<img class="picture" src="res\pictures\l6.jpg"/>
+		<img class="picture" src="res\pictures\l7.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerM">
+		<img class="picture" src="res\pictures\m.jpg"/>
+		<img class="picture" src="res\pictures\m1.jpg"/>
+		<img class="picture" src="res\pictures\m2.png"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerN">
+		<img class="picture" src="res\pictures\n.jpg"/>
+		<img class="picture" src="res\pictures\n1.jpg"/>
+		<img class="picture" src="res\pictures\n2.png"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerO">
+		<img class="picture" src="res\pictures\o.jpg"/>
+		<img class="picture" src="res\pictures\o1.png"/>
+		<img class="picture" src="res\pictures\o2.jpg"/>
+		<img class="picture" src="res\pictures\o3.png"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerP">
+		<img class="picture" src="res\pictures\p.jpg"/>
+		<img class="picture" src="res\pictures\p1.png"/>
+		<img class="picture" src="res\pictures\p2.jpg"/>
+		<img class="picture" src="res\pictures\p3.jpg"/>
+		<img class="picture" src="res\pictures\p4.jpg"/>
+		<img class="picture" src="res\pictures\p5.jpg"/>
+		<img class="picture" src="res\pictures\p6.jpg"/>
+		<img class="picture" src="res\pictures\p7.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerQ">
+		<img class="picture" src="res\pictures\q.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerR">
+		<img class="picture" src="res\pictures\r.jpg"/>
+		<img class="picture" src="res\pictures\r1.jpg"/>
+		<img class="picture" src="res\pictures\r2.jpg"/>
+		<img class="picture" src="res\pictures\r3.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerS">
+		<img class="picture" src="res\pictures\s.jpg"/>
+		<img class="picture" src="res\pictures\s1.png"/>
+		<img class="picture" src="res\pictures\s2.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerT">
+		<img class="picture" src="res\pictures\t.jpg"/>
+		<img class="picture" src="res\pictures\t1.jpg"/>
+		<img class="picture" src="res\pictures\t2.jpg"/>
+		<img class="picture" src="res\pictures\t3.png"/>
+		<img class="picture" src="res\pictures\t4.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerU">
+		<img class="picture" src="res\pictures\u.jpg"/>
+		<img class="picture" src="res\pictures\u1.png"/>
+		<img class="picture" src="res\pictures\u2.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerV">
+		<img class="picture" src="res\pictures\v.jpg"/>
+		<img class="picture" src="res\pictures\v1.jpg"/>
+		<img class="picture" src="res\pictures\v2.jpg"/>
+		<img class="picture" src="res\pictures\v3.jpg"/>
+		<img class="picture" src="res\pictures\v4.jpg"/>
+		<img class="picture" src="res\pictures\v5.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerW">
+		<img class="picture" src="res\pictures\w.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerX">
+		<img class="picture" src="res\pictures\x.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerY">
+		<img class="picture" src="res\pictures\y.jpg"/>
+	</div>
+	<div class="pictureContainer" id="pictureContainerZ">
+		<img class="picture" src="res\pictures\z.jpg"/>
+	</div>
+</div>
+</body>
+</html>
