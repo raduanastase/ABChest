@@ -1,5 +1,5 @@
 /**
- * Created by radua on 9/20/2015.
+ * Created by Radu Anastase on 9/20/2015.
  */
 $(function () {
 
@@ -27,11 +27,11 @@ $(function () {
 		var $currentPicture;
 
         if((key >= 48 && key <=90) || (key >= 96 && key <=105)) {
-			if(lastChar) SoundPlayer.stop("letter"+lastChar);
+			if(lastChar) SoundManager[lastChar].stop();
 
 			char = String.fromCharCode((96 <= key && key <= 105)? key-48 : key);
 
-			SoundPlayer.start("letter"+char);
+            SoundManager[char].play();
 			lastChar = char;
 			$pictureContainers.hide();
             $pictures.hide();
