@@ -17,3 +17,8 @@
         <li>add English sounds and pictures</li>
     </ul>
 </p>
+
+<h2>Demo</h2>
+<p>
+    You can find a demo <a href="http://codethatcounts.com/_projects/ABChest/">here</a>.
+</p>
