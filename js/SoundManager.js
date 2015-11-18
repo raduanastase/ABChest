@@ -1,7 +1,7 @@
 /**
  * Created by Radu Anastase on 03-Nov-15.
  */
-window.SoundManager = {
+window.SoundMap = {
     'A': new buzz.sound("res/audio/a.mp3"),
     'B': new buzz.sound("res/audio/b.mp3"),
     'C': new buzz.sound("res/audio/c.mp3"),

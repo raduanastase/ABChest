@@ -7,10 +7,16 @@ body {
     font-family: 'NoTo', sans-serif;
 }
 
+#directions {
+    position: absolute;
+    text-align: center;
+    font-size: 10vh;
+}
+
 #symbol {
     width: 100%;
     text-align: center;
-    font-size: 370px;
+    font-size: 40vh;
 }
 
 #pictureContainer {
@@ -19,7 +25,7 @@ body {
 }
 
 .picture {
-    height: 350px;
+    height: 40vh;
 }
 
 #loader {

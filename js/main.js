@@ -3,42 +3,60 @@
  */
 $(function () {
 
-    var $loader = $("#loader");
-    var $symbol = $("#symbol");
-    var $pictureContainers = $(".pictureContainer");
-    var $pictures = $(".picture");
-	var lastChar = null;
+    var $window = $(window),
+        $loader = $("#loader"),
+        $directions = $("#directions"),
+        $symbol = $("#symbol"),
+        $pictureContainers = $(".pictureContainer"),
+        $pictures = $(".picture"),
+        lastChar = null;
 
     init();
 
     function init() {
+        arrangeElements();
 
         $loader.fadeOut("slow");
 
-		$pictureContainers.hide();
+        $pictureContainers.hide();
         $pictures.hide();
-        $(window).on("keydown", onKeyPressed);
+        $window.on("keydown", onKeyPressed);
+        $window.on('resize', onWindowResize);
+    }
+
+    function arrangeElements() {
+        $directions.css({
+            top: $window.height() / 2 - $directions.outerHeight() / 2,
+            left: $window.width() / 2 - $directions.outerWidth() / 2
+        });
+    }
+
+    function onWindowResize() {
+        arrangeElements();
     }
 
     function onKeyPressed(e) {
-        var key = e.keyCode;
-        var char;
-		var $currentContainer;
-		var $currentPicture;
+        var key = e.keyCode,
+            char,
+            $currentContainer,
+            $currentPicture;
 
-        if((key >= 48 && key <=90) || (key >= 96 && key <=105)) {
-			if(lastChar) SoundManager[lastChar].stop();
+        $directions.hide();
 
-			char = String.fromCharCode((96 <= key && key <= 105)? key-48 : key);
+        if ((key >= 48 && key <= 90) || (key >= 96 && key <= 105)) {
+            if (lastChar && SoundMap[lastChar]) SoundMap[lastChar].stop();
 
-            SoundManager[char].play();
-			lastChar = char;
-			$pictureContainers.hide();
+            char = String.fromCharCode((96 <= key && key <= 105) ? key - 48 : key);
+
+            if(SoundMap[char]) SoundMap[char].play();
+
+            lastChar = char;
+            $pictureContainers.hide();
             $pictures.hide();
-			$currentContainer = $("#pictureContainer"+char);
-			$currentPicture = $($currentContainer.children()[randomBetween(0, $currentContainer.children().size() - 1)]);
-			$currentPicture.show();
-			$currentContainer.show();
+            $currentContainer = $("#pictureContainer" + char);
+            $currentPicture = $($currentContainer.children()[randomBetween(0, $currentContainer.children().size() - 1)]);
+            $currentPicture.show();
+            $currentContainer.show();
             $symbol.css({color: getRandomColor()});
             $symbol.text(char);
         } else {
@@ -49,13 +67,13 @@ $(function () {
     function getRandomColor() {
         var letters = '0123456789ABCDEF'.split('');
         var color = '#';
-        for (var i = 0; i < 6; i++ ) {
+        for (var i = 0; i < 6; i++) {
             color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
     }
 
-	function randomBetween(a, b) {
-		return Math.floor(Math.random()*(b-a+1)+a);
-	}
+    function randomBetween(a, b) {
+        return Math.floor(Math.random() * (b - a + 1) + a);
+    }
 });
