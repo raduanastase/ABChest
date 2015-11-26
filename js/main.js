@@ -7,8 +7,11 @@ $(function () {
         $loader = $("#loader"),
         $directions = $("#directions"),
         $symbol = $("#symbol"),
-        $pictureContainers = $(".pictureContainer"),
+        $pictureContainers = $(".picture-container"),
         $pictures = $(".picture"),
+        $languageSwitch = $("#language-switch"),
+        $langRo = $('.lang-ro'),
+        $langEn = $('.lang-en'),
         lastChar = null;
 
     init();
@@ -20,8 +23,11 @@ $(function () {
 
         $pictureContainers.hide();
         $pictures.hide();
+        $langEn.hide();
+
         $window.on("keydown", onKeyPressed);
         $window.on('resize', onWindowResize);
+        $languageSwitch.on('change', onLanguageSwitchChange);
     }
 
     function arrangeElements() {
@@ -33,6 +39,17 @@ $(function () {
 
     function onWindowResize() {
         arrangeElements();
+    }
+
+    function onLanguageSwitchChange() {
+        var isRo = $languageSwitch.is(':checked');
+        if(isRo) {
+            $langRo.show();
+            $langEn.hide();
+        } else {
+            $langRo.hide();
+            $langEn.show();
+        }
     }
 
     function onKeyPressed(e) {
@@ -53,7 +70,7 @@ $(function () {
             lastChar = char;
             $pictureContainers.hide();
             $pictures.hide();
-            $currentContainer = $("#pictureContainer" + char);
+            $currentContainer = $("#picture-container" + char);
             $currentPicture = $($currentContainer.children()[randomBetween(0, $currentContainer.children().size() - 1)]);
             $currentPicture.show();
             $currentContainer.show();
