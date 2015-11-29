@@ -3,7 +3,7 @@
     top: 30px;
     right: 30px;
     width: 150px;
-    height: 60px;
+    height: 100px;
 }
 
 .cmn-toggle {
@@ -31,13 +31,13 @@ input.cmn-toggle-yes-no + label:after {
     line-height: 60px;
 }
 input.cmn-toggle-yes-no + label:before {
-    background: url(../res/images/en.png);
+    background: url(../res/images/en.png) no-repeat;
     content: " ";
     transition: transform 0.5s;
     backface-visibility: hidden;
 }
 input.cmn-toggle-yes-no + label:after {
-    background: url(../res/images/ro.png);
+    background: url(../res/images/ro.png) no-repeat;
     content: " ";
     transition: transform 0.5s;
     transform: rotateY(180deg);
