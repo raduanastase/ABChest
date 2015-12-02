@@ -31,13 +31,13 @@ input.cmn-toggle-yes-no + label:after {
     line-height: 60px;
 }
 input.cmn-toggle-yes-no + label:before {
-    background: url(../res/images/en.png) no-repeat;
+    background: url(../res/images/ro.png) no-repeat;
     content: " ";
     transition: transform 0.5s;
     backface-visibility: hidden;
 }
 input.cmn-toggle-yes-no + label:after {
-    background: url(../res/images/ro.png) no-repeat;
+    background: url(../res/images/en.png) no-repeat;
     content: " ";
     transition: transform 0.5s;
     transform: rotateY(180deg);
