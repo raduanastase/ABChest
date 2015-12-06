@@ -4,24 +4,33 @@
 $(function () {
 
     var $window = $(window),
-        $loader = $("#loader"),
-        $directions = $("#directions"),
-        $symbol = $("#symbol"),
-        $pictureContainers = $(".pictureContainer"),
-        $pictures = $(".picture"),
-        lastChar = null;
+        $loader = $('#loader'),
+        $directions = $('#directions'),
+        $symbol = $('#symbol'),
+        $pictureContainers = $('.picture-container'),
+        $pictures = $('.picture'),
+        $switch = $('.switch'),
+        $languageSwitch = $('#language-switch'),
+        $langRo = $('.lang-ro'),
+        $langEn = $('.lang-en'),
+        lastChar = null,
+        isRo = !$languageSwitch.is(':checked'),
+        lang = isRo ? 'ro' : 'en';
 
     init();
 
     function init() {
         arrangeElements();
 
-        $loader.fadeOut("slow");
+        $loader.fadeOut('slow');
 
         $pictureContainers.hide();
         $pictures.hide();
-        $window.on("keydown", onKeyPressed);
+        $langEn.hide();
+
+        $window.on('keydown', onKeyPressed);
         $window.on('resize', onWindowResize);
+        $languageSwitch.on('change', onLanguageSwitchChange);
     }
 
     function arrangeElements() {
@@ -35,28 +44,44 @@ $(function () {
         arrangeElements();
     }
 
+    function onLanguageSwitchChange() {
+        isRo = !isRo;
+        lang = isRo ? 'ro' : 'en';
+        if (isRo) {
+            $langRo.show();
+            $langEn.hide();
+        } else {
+            $langRo.hide();
+            $langEn.show();
+        }
+    }
+
     function onKeyPressed(e) {
         var key = e.keyCode,
             char,
-            $currentContainer,
-            $currentPicture;
-
-        $directions.hide();
+            $currentImagesForLang,
+            $currentPicture,
+            $currentImagesContainer;
 
         if ((key >= 48 && key <= 90) || (key >= 96 && key <= 105)) {
-            if (lastChar && SoundMap[lastChar]) SoundMap[lastChar].stop();
+
+            $switch.hide();
+            $directions.hide();
+
+            if (lastChar && SoundMap[lang + '-' + lastChar]) SoundMap[lang + '-' + lastChar].stop();
 
             char = String.fromCharCode((96 <= key && key <= 105) ? key - 48 : key);
 
-            if(SoundMap[char]) SoundMap[char].play();
+            if (SoundMap[lang + '-' + char]) SoundMap[lang + '-' + char].play();
 
             lastChar = char;
             $pictureContainers.hide();
             $pictures.hide();
-            $currentContainer = $("#pictureContainer" + char);
-            $currentPicture = $($currentContainer.children()[randomBetween(0, $currentContainer.children().size() - 1)]);
+            $currentImagesContainer = $('#picture-container' + char);
+            $currentImagesForLang = $currentImagesContainer.find('.lang-' + lang);
+            $currentPicture = $currentImagesForLang.eq(randomBetween(0, $currentImagesForLang.length - 1));
             $currentPicture.show();
-            $currentContainer.show();
+            $currentImagesContainer.show();
             $symbol.css({color: getRandomColor()});
             $symbol.text(char);
         } else {
