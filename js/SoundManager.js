@@ -37,6 +37,7 @@ window.SoundMap = {
     'ro-7': new buzz.sound("res/audio/ro/7.mp3"),
     'ro-8': new buzz.sound("res/audio/ro/8.mp3"),
     'ro-9': new buzz.sound("res/audio/ro/9.mp3"),
+    'ro-0': new buzz.sound("res/audio/ro/0.mp3"),
 
     'en-A': new buzz.sound("res/audio/en/a.mp3"),
     'en-B': new buzz.sound("res/audio/en/b.mp3"),
