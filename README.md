@@ -8,9 +8,9 @@
         <li>the sound of that letter/number</li>
     </ul>
     <i> 
-        This mini game is designed to work for Romanian and English. 
-        Most of the sounds you hear in Romanian are recorded by my little girl. 
-        The sounds in English are recorded by <a href="https://www.fiverr.com/calisto2986">calisto2986</a>.
+        This mini game is designed to work for Romanian and English.<br/> 
+        Most of the sounds you hear in Romanian are recorded by my little girl.<br/> 
+        The sounds in English are recorded by <a href="https://www.fiverr.com/calisto2986">calisto2986</a>.<br/>
         As far as I remember, all images are from www.pixabay.com and are free to use for commercial and non-commercial use.
     </i>
 </p>
