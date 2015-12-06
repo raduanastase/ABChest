@@ -72,7 +72,8 @@ window.SoundMap = {
     'en-6': new buzz.sound("res/audio/en/6.mp3"),
     'en-7': new buzz.sound("res/audio/en/7.mp3"),
     'en-8': new buzz.sound("res/audio/en/8.mp3"),
-    'en-9': new buzz.sound("res/audio/en/9.mp3")
+    'en-9': new buzz.sound("res/audio/en/9.mp3"),
+    'en-0': new buzz.sound("res/audio/en/0.mp3")
 };
 
 
