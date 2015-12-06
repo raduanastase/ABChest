@@ -7,6 +7,14 @@ body {
     font-family: 'NoTo', sans-serif;
 }
 
+#info {
+    position: absolute;
+    top: 30px;
+    right: 200px;
+    text-align: center;
+    font-size: 3vh;
+}
+
 #directions {
     position: absolute;
     text-align: center;

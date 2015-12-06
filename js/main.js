@@ -1,7 +1,7 @@
 /**
  * Created by Radu Anastase on 9/20/2015.
  */
-$(function () {
+$(window).on('load', function() {
 
     var $window = $(window),
         $loader = $('#loader'),
@@ -13,6 +13,7 @@ $(function () {
         $languageSwitch = $('#language-switch'),
         $langRo = $('.lang-ro'),
         $langEn = $('.lang-en'),
+        $info = $('#info'),
         lastChar = null,
         isRo = !$languageSwitch.is(':checked'),
         lang = isRo ? 'ro' : 'en';
@@ -66,6 +67,7 @@ $(function () {
         if ((key >= 48 && key <= 90) || (key >= 96 && key <= 105)) {
 
             $switch.hide();
+            $info.hide();
             $directions.hide();
 
             if (lastChar && SoundMap[lang + '-' + lastChar]) SoundMap[lang + '-' + lastChar].stop();
