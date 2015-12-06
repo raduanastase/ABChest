@@ -18,8 +18,8 @@
 <h2>Future improvements</h2>
 <p>
     <ul>
-        <li>~~add images and sounds for numbers~~</li>
-        <li>~~add English sounds and pictures~~</li>
+        <li> ~~add images and sounds for numbers~~ </li>
+        <li> ~~add English sounds and pictures~~ </li>
         <li>add more languages?</li>
     </ul>
 </p>
