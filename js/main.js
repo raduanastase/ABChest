@@ -49,15 +49,23 @@ $(window).on('load', function() {
         isRo = !isRo;
         lang = isRo ? 'ro' : 'en';
         if (isRo) {
+            $langRo.hide();
+            $langEn.hide();
+        } else {
+            $langRo.hide();
+            $langEn.hide();
+        }
+    }
+
+    function onKeyPressed(e) {
+        if (isRo) {
             $langRo.show();
             $langEn.hide();
         } else {
             $langRo.hide();
             $langEn.show();
         }
-    }
 
-    function onKeyPressed(e) {
         var key = e.keyCode,
             char,
             $currentImagesForLang,
@@ -66,8 +74,8 @@ $(window).on('load', function() {
 
         if ((key >= 48 && key <= 90) || (key >= 96 && key <= 105)) {
 
-            $switch.hide();
-            $info.hide();
+            // $switch.hide();
+            // $info.hide();
             $directions.hide();
 
             if (lastChar && SoundMap[lang + '-' + lastChar]) SoundMap[lang + '-' + lastChar].stop();
