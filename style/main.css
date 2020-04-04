@@ -36,6 +36,10 @@ body {
     height: 40vh;
 }
 
+.label {
+    font-size: 20px;
+}
+
 #loader {
     position: fixed;
     left: 0;

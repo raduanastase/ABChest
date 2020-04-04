@@ -1,317 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ABChest</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css"/>
-    <link rel="stylesheet" href="style/language-switch.css" type="text/css"/>
+  <meta charset="UTF-8">
+  <title>ABChest</title>
+  <link rel="stylesheet" href="style/main.css" type="text/css"/>
+  <link rel="stylesheet" href="style/language-switch.css" type="text/css"/>
 </head>
 <body>
 <div id="loader"></div>
 
 <div class="switch">
-    <input id="language-switch" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-    <label for="language-switch"></label>
+  <input id="language-switch" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
+  <label for="language-switch"></label>
 </div>
 
 <div id="directions">
-    <div class="direction lang-ro">Apasă pe orice literă sau număr</div>
-    <div class="direction lang-en">Press any letter or number</div>
+  <div class="direction lang-ro">Apasă pe orice literă sau număr</div>
+  <div class="direction lang-en">Press any letter or number</div>
 </div>
 
 <div id="info">
-    <div class="info lang-en">Apasă pe steag pentru a schimba limba</div>
-    <div class="info lang-ro">Press the flag to change the language</div>
+  <div class="info lang-en">Apasă pe steag pentru a schimba limba</div>
+  <div class="info lang-ro">Press the flag to change the language</div>
 </div>
 
 <div id="symbol"></div>
 
 <div id="pictures-container">
 
-    <!--NUMBERS-->
+  <!--NUMBERS-->
 
-    <div class="picture-container" id="picture-container1">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number1.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number1-1.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number1-2.jpg"/>
+  <div class="picture-container" id="picture-container0">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number0.png"/>
     </div>
-    <div class="picture-container" id="picture-container2">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number2.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number2-1.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number2-2.jpg"/>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number0-1.jpg"/>
     </div>
-    <div class="picture-container" id="picture-container3">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number3.png"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number3-1.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number3-2.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number3-3.jpg"/>
+  </div>
+  <div class="picture-container" id="picture-container1">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number1.svg"/>
     </div>
-    <div class="picture-container" id="picture-container4">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number4.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number4-1.png"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number4-2.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number4-3.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number4-4.png"/>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number1-1.png"/>
     </div>
-    <div class="picture-container" id="picture-container5">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number5.png"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number5-1.png"/>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number1-2.svg"/>
     </div>
-    <div class="picture-container" id="picture-container6">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number6.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number6-1.jpg"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number6-2.jpg"/>
+  </div>
+  <div class="picture-container" id="picture-container2">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number2.svg"/>
     </div>
-    <div class="picture-container" id="picture-container7">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number7.png"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number7-1.png"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number7-2.jpg"/>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number2-1.png"/>
     </div>
-    <div class="picture-container" id="picture-container8">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number8.png"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number8-1.png"/>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number2-2.svg"/>
     </div>
-    <div class="picture-container" id="picture-container9">
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number9.png"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number9-1.png"/>
-        <img class="picture lang-ro lang-en" src="res/pictures/numbers/number9-2.png"/>
+  </div>
+  <div class="picture-container" id="picture-container3">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number3.svg"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number3-1.png"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number3-2.svg"/>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-container4">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number4.svg"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number4-1.png"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number4-2.svg"/>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-container5">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number5.svg"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number5-1.png"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number5-2.svg"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number5-3.png"/>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-container6">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number6.svg"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number6-1.png"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number6-2.svg"/>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-container7">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number7.svg"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number7-1.png"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number7-2.png"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number7-3.svg"/>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-container8">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number8.png"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number8-1.svg"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number8-2.png"/>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-container9">
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number9.png"/>
+    </div>
+    <div class="picture">
+      <img class="picture" src="res/pictures/numbers/number9-1.svg"/>
+    </div>
+  </div>
+
+  <!--LETTERS-->
+
+  <div class="picture-container" id="picture-containerA">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/ahasuerus-xerxes-esther-back.jpg"/>
+      <div class="label">Ahașveroș (Xerxe - regele Persiei, soțul Esterei)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/animals-ark.jpg"/>
+      <div class="label">Animale</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/ark-water.jpg"/>
+      <div class="label">Arca lui Noe</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/abraham-stars.jpg"/>
+      <div class="label">Avraam (promisiunea facută de Dumnezeu)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/adam-animals.jpg"/>
+      <div class="label">Adam</div>
     </div>
 
-    <!--LETTERS-->
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/adam-animals.jpg"/>
+      <div class="label">Adam</div>
+    </div>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/ahasuerus-xerxes-esther-back.jpg"/>
+      <div class="label">Ahasuerus (Xerxes - king of Persia, Eshter's husband)</div>
+    </div>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/animals-ark.jpg"/>
+      <div class="label">Animals</div>
+    </div>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/abraham-stars.jpg"/>
+      <div class="label">Abraham (the promise made by God)</div>
+    </div>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/ark-water.jpg"/>
+      <div class="label">Ark (Noah's ark)</div>
+    </div>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/angel-joseph.jpg"/>
+      <div class="label">Angel (talking to Joseph)</div>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-containerB">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/boaz-ruth.jpg"/>
+      <div class="label">Boaz (soțul lui Rut)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/balaam-donkey-talks.jpg"/>
+      <div class="label">Balaam (cu măgărița vorbitoare)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/bible.jpg"/>
+      <div class="label">Biblia</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/map-nazareth-bethlehem.jpg"/>
+      <div class="label">Betleem</div>
+    </div>
 
-    <div class="picture-container" id="picture-containerA">
-        <img class="picture lang-ro" src="res/pictures/ro/a.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/a1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/a2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/a.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/a1.png"/>
-        <img class="picture lang-en" src="res/pictures/en/a2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/a3.jpg"/>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/boaz-ruth.jpg"/>
+      <div class="label">Boaz (Ruth's husband)</div>
     </div>
-    <div class="picture-container" id="picture-containerB">
-        <img class="picture lang-ro" src="res/pictures/ro/b.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/b1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/b2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/b3.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/b4.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/b5.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/b.png"/>
-        <img class="picture lang-en" src="res/pictures/en/b1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/b2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/b3.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/b4.jpg"/>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/balaam-donkey-talks.jpg"/>
+      <div class="label">Balaam (with the talking donkey)</div>
     </div>
-    <div class="picture-container" id="picture-containerC">
-        <img class="picture lang-ro" src="res/pictures/ro/c.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c3.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c4.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c5.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c6.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c7.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c8.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/c9.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/c.png"/>
-        <img class="picture lang-en" src="res/pictures/en/c1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/c2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/c3.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/c4.jpg"/>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/bible.jpg"/>
+      <div class="label">Bible</div>
     </div>
-    <div class="picture-container" id="picture-containerD">
-        <img class="picture lang-ro" src="res/pictures/ro/d.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/d1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/d.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/d1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/d2.jpg"/>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/tower-babel-people.jpg"/>
+      <div class="label">Babel Tower</div>
     </div>
-    <div class="picture-container" id="picture-containerE">
-        <img class="picture lang-ro" src="res/pictures/ro/e.png"/>
-        <img class="picture lang-ro" src="res/pictures/ro/e1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/e2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/e.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/e1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/e2.jpg"/>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/moses-burning-bush.jpg"/>
+      <div class="label">Burning bush</div>
     </div>
-    <div class="picture-container" id="picture-containerF">
-        <img class="picture lang-ro" src="res/pictures/ro/f.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/f1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/f2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/f3.png"/>
-        <img class="picture lang-en" src="res/pictures/en/f.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/f1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/f2.jpg"/>
+    <div class="lang-en">
+      <img class="picture" src="res/pictures/map-nazareth-bethlehem.jpg"/>
+      <div class="label">Bethlehem</div>
     </div>
-    <div class="picture-container" id="picture-containerG">
-        <img class="picture lang-ro" src="res/pictures/ro/g.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/g1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/g2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/g3.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/g.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/g1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/g2.jpg"/>
+
+  </div>
+  <div class="picture-container" id="picture-containerC">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/caleb-spies.jpg"/>
+      <div class="label">Caleb (și Iosua după cercetarea Canaanului)</div>
     </div>
-    <div class="picture-container" id="picture-containerH">
-        <img class="picture lang-ro" src="res/pictures/ro/h.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/h1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/h2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/h.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/h1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/h2.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/creation-animals.jpg"/>
+      <div class="label">Creațiunea</div>
     </div>
-    <div class="picture-container" id="picture-containerI">
-        <img class="picture lang-ro" src="res/pictures/ro/i.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/i1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/i.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/i1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/i2.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/cain-abel-altar.jpg"/>
+      <div class="label">Cain (care a adus roade ale pământului)</div>
     </div>
-    <div class="picture-container" id="picture-containerJ">
-        <img class="picture lang-ro" src="res/pictures/ro/j.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/j1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/j.png"/>
-        <img class="picture lang-en" src="res/pictures/en/j1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/j2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/j3.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/cross.jpg"/>
+      <div class="label">Cruce</div>
     </div>
-    <div class="picture-container" id="picture-containerK">
-        <img class="picture lang-ro" src="res/pictures/ro/k.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/k1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/k.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/k1.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/crown-of-thorns.png"/>
+      <div class="label">Coroană de spini</div>
     </div>
-    <div class="picture-container" id="picture-containerL">
-        <img class="picture lang-ro" src="res/pictures/ro/l.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/l1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/l2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/l3.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/l4.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/l5.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/l6.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/l7.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/l.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/l1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/l2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/l3.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/cyrus-signs-order.jpg"/>
+      <div class="label">Cirus (împăratul care a dat ordinul de reconstruire al tempului)</div>
     </div>
-    <div class="picture-container" id="picture-containerM">
-        <img class="picture lang-ro" src="res/pictures/ro/m.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/m1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/m2.png"/>
-        <img class="picture lang-en" src="res/pictures/en/m.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/m1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/m2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/m3.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jesus-cana-wedding-wine-water.jpg"/>
+      <div class="label">Cana (nunta din acel loc unde Isus a făcut prima minune)</div>
     </div>
-    <div class="picture-container" id="picture-containerN">
-        <img class="picture lang-ro" src="res/pictures/ro/n.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/n1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/n2.png"/>
-        <img class="picture lang-en" src="res/pictures/en/n.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/n1.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/joshua-caleb.jpg"/>
+      <div class="label">Caleb (cu roadele din Canaan)</div>
     </div>
-    <div class="picture-container" id="picture-containerO">
-        <img class="picture lang-ro" src="res/pictures/ro/o.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/o1.png"/>
-        <img class="picture lang-ro" src="res/pictures/ro/o2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/o3.png"/>
-        <img class="picture lang-en" src="res/pictures/en/o.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/o1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/o2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/o3.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/pentecost.jpg"/>
+      <div class="label">Cincizecimea (ziua în care Duhul Sfânt s-a coborât ca limbi de foc)</div>
     </div>
-    <div class="picture-container" id="picture-containerP">
-        <img class="picture lang-ro" src="res/pictures/ro/p.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/p1.png"/>
-        <img class="picture lang-ro" src="res/pictures/ro/p2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/p3.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/p4.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/p5.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/p6.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/p7.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/p.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/p1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/p2.png"/>
-        <img class="picture lang-en" src="res/pictures/en/p3.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/p4.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jesus-children.jpg"/>
+      <div class="label">Copiii (în jurul lui Isus)</div>
     </div>
-    <div class="picture-container" id="picture-containerQ">
-        <img class="picture lang-ro" src="res/pictures/ro/q.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/q1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/q.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/q1.jpg"/>
+
+  </div>
+  <div class="picture-container" id="picture-containerD">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/dorcas-tabitah.jpg"/>
+      <div class="label">Dorca (Tabita - se îngrijea de cei săraci)</div>
     </div>
-    <div class="picture-container" id="picture-containerR">
-        <img class="picture lang-ro" src="res/pictures/ro/r.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/r1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/r2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/r3.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/r.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/r1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/r2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/r3.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/daniel-dream.jpg"/>
+      <div class="label">Daniel (îi descopera visul împăratului)</div>
     </div>
-    <div class="picture-container" id="picture-containerS">
-        <img class="picture lang-ro" src="res/pictures/ro/s.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/s1.png"/>
-        <img class="picture lang-ro" src="res/pictures/ro/s2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/s.png"/>
-        <img class="picture lang-en" src="res/pictures/en/s1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/s2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/s3.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/daniel-lions.jpg"/>
+      <div class="label">Daniel (în groapa cu lei)</div>
     </div>
-    <div class="picture-container" id="picture-containerT">
-        <img class="picture lang-ro" src="res/pictures/ro/t.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/t1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/t2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/t3.png"/>
-        <img class="picture lang-ro" src="res/pictures/ro/t4.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/t.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/t1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/t2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/t3.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/t4.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/david-sheep.jpg"/>
+      <div class="label">David</div>
     </div>
-    <div class="picture-container" id="picture-containerU">
-        <img class="picture lang-ro" src="res/pictures/ro/u.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/u1.png"/>
-        <img class="picture lang-ro" src="res/pictures/ro/u2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/u.png"/>
-        <img class="picture lang-en" src="res/pictures/en/u1.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/map-jerusalem-damascus.jpg"/>
+      <div class="label">Damasc (Pavel a avut un drum de la Ierusalim la Damasc)</div>
     </div>
-    <div class="picture-container" id="picture-containerV">
-        <img class="picture lang-ro" src="res/pictures/ro/v.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/v1.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/v2.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/v3.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/v4.jpg"/>
-        <img class="picture lang-ro" src="res/pictures/ro/v5.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/v.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/v1.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/samson-delilah.jpg"/>
+      <div class="label">Dalila (iubita lui Samson care l-a trădat)</div>
     </div>
-    <div class="picture-container" id="picture-containerW">
-        <img class="picture lang-ro" src="res/pictures/ro/w.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/w.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/w1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/w2.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/w3.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/w4.jpg"/>
+
+  </div>
+  <div class="picture-container" id="picture-containerE">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/elijah-chariot-elisha.jpg"/>
+      <div class="label">Elisei (privindu-l pe Ilie cum se ridică la cer)</div>
     </div>
-    <div class="picture-container" id="picture-containerX">
-        <img class="picture lang-ro" src="res/pictures/ro/x.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/x.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/x1.png"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/esau.jpg"/>
+      <div class="label">Esau</div>
     </div>
-    <div class="picture-container" id="picture-containerY">
-        <img class="picture lang-ro" src="res/pictures/ro/y.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/y.png"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/eutychus.jpg"/>
+      <div class="label">Eutih (adormit ascultându-l pe Pavel)</div>
     </div>
-    <div class="picture-container" id="picture-containerZ">
-        <img class="picture lang-ro" src="res/pictures/ro/z.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/z.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/z1.jpg"/>
-        <img class="picture lang-en" src="res/pictures/en/z2.jpg"/>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/eve.jpg"/>
+      <div class="label">Eva</div>
     </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/ahasuerus-xerxes-esther.jpg"/>
+      <div class="label">Estera</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/sundial-hezekiah-healed.jpg"/>
+      <div class="label">Ezechia</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerF">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/felix-paul-arrested-jerusalem.jpg"/>
+      <div class="label">Felix (judecându-l pe Pavel)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/paul-trialed-by-festus.jpg"/>
+      <div class="label">Festus (judecându-l pe Pavel)</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerG">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/gideon-fleece.jpg"/>
+      <div class="label">Ghedeon (cerând semnul cu lâna)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/golgotha.jpg"/>
+      <div class="label">Golgota (dealul pe care Isus a fost răstignit)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/david-goliath.jpg"/>
+      <div class="label">Goliat</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerH">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/haman-mordechai.jpg"/>
+      <div class="label">Haman (furios că Mardoheu a primit răsplata dorită de el)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/haman-mordechai-2.jpg"/>
+      <div class="label">Haman</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerI">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/abraham-isaac-altar.jpg"/>
+      <div class="label">Isaac (adus jertfă de Avraam)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jesus.png"/>
+      <div class="label">Isus</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/elijah-chariot-elisha.jpg"/>
+      <div class="label">Ilie (dus la cer de o trăsură de foc)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/elijah-ravens.jpg"/>
+      <div class="label">Ilie (hrănit de corbi)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jonah-fish.jpg"/>
+      <div class="label">Iona</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jacob-dreaming-the-stairs-with-angels.jpg"/>
+      <div class="label">Iacov</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jacob-battles-angels-becomes-israel.jpg"/>
+      <div class="label">Israel (Iacov luptându-se cu îngerul, apoi primind numele Israel)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/job-wife-ill.jpg"/>
+      <div class="label">Iov</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerJ">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jacob-dreaming-the-stairs-with-angels.jpg"/>
+      <div class="label">Jacob (denumirea în engleză a lui Iacov)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jonah-fish.jpg"/>
+      <div class="label">Jonah (denumirea în engleză a lui Iona)</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerK">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/kiwi.jpg"/>
+      <div class="label">Kiwi</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/koala.jpg"/>
+      <div class="label">Koala</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerL">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/leah-rachel.jpg"/>
+      <div class="label">Lea (prima soție a lui Iacov, sora Rahelei)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/levites-carrying-the-ark.jpg"/>
+      <div class="label">Leviții (care cărau chivotul)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jesus-lazarus.jpg"/>
+      <div class="label">Lazăr</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/map-with-lystra.jpg"/>
+      <div class="label">Listra (una din locațiile vizitate de Pavel)</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerM">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/mary-cries-for-jesus-angels.jpg"/>
+      <div class="label">Maria (plângând la mormântul lui Isus)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/miriam-baby-moses.jpg"/>
+      <div class="label">Miriam (cu bebe Moise si sora Faraonului)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jesus-mary-martha.jpg"/>
+      <div class="label">Marta</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jesus-calling-matthew.jpg"/>
+      <div class="label">Matei (chemarea de a fi ucenic)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/moses-burning-bush.jpg"/>
+      <div class="label">Moise (cu rugul de foc)</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerN">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/naomi-ruth.jpg"/>
+      <div class="label">Naomi (soacra lui Rut)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/nimrod-think-of-babel.jpg"/>
+      <div class="label">Nimrod (venindu-i ideea turnului)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/nebuchadnezzar-meshach-shadrach-abednego.jpg"/>
+      <div class="label">Nebucadnețar (Nabucodonosor - cu Meșac, Șadrac si Abednego)</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerO">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/orpah-ruth-naomi.jpg"/>
+      <div class="label">Orpa (nora lui Naomi care nu a venit cu ea)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/naomi-obed-ruth-boaz.jpg"/>
+      <div class="label">Obed (copilul lui Rut și Boaz)</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerP">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/palestine.jpg"/>
+      <div class="label">Palestina</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/paul-bitten-by-a-snake.jpg"/>
+      <div class="label">Pavel (mușcat de o năpârcă)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/peter-walking-on-water.jpg"/>
+      <div class="label">Petru (mergând pe ape)</div>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-containerQ">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/quasar.jpg"/>
+      <div class="label">Quasar (obiect cosmic, cu strălucire de zeci sau sute de ori mai puternică decât a celor mai
+        mari galaxii)
+      </div>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-containerR">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/rachel-idols.jpg"/>
+      <div class="label">Rahela (ascuzând idolii furați de la Laban)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/rebecca-carrying-water.jpg"/>
+      <div class="label">Rebeca</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/prayer.svg"/>
+      <div class="label">Rugăciune</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/ruth-grains.jpg"/>
+      <div class="label">Rut</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerS">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/samson-foxes.jpg"/>
+      <div class="label">Samson (dând foc la câmpurile filistenilor)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/salome-herod-antipas.jpg"/>
+      <div class="label">Salome (fiica vitregă a lui Irod Antipa)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/samuel-hearing-god.jpg"/>
+      <div class="label">Samuel (auzind vocea Lui Dumnezeu)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/simeon-jesus-joseph-mary.jpg"/>
+      <div class="label">Simeon (îl vede și binecuvintează pe Isus)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/sarah-abraham-isaac.jpg"/>
+      <div class="label">Sara (mama lui Isaac și soția lui Avraam)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/paul-silas-prison.jpg"/>
+      <div class="label">Sila (și Pavel în temnință cântând)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/snake-tree.jpg"/>
+      <div class="label">Șarpele (din Eden)</div>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-containerT">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/tower-babel-people.jpg"/>
+      <div class="label">Turnul Babel</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/dorcas-tabitah.jpg"/>
+      <div class="label">Tabita (Dorca - se îngrijea de cei săraci)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/jesus-thomas-doubts.jpg"/>
+      <div class="label">Toma (necredinciosul)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/judas-thaddeus.jpg"/>
+      <div class="label">Iuda <b>Tadeul</b></div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerU">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/bear.jpg"/>
+      <div class="label">Urs</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/elisha-oil-widow.jpg"/>
+      <div class="label">Ulei (untdelemnul care nu se termina)</div>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-containerV">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/vashti-queen.jpg"/>
+      <div class="label">Vasti (prima soție a lui Xerxe)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/vulture.jpg"/>
+      <div class="label">Vultur</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/abraham-sarah-voyage-pyramids.jpg"/>
+      <div class="label">Voiajul (lui Avraam catre Canaan)</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerW">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/wallaby.jpg"/>
+      <div class="label">Wallaby</div>
+    </div>
+
+  </div>
+  <div class="picture-container" id="picture-containerX">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/xylophone.png"/>
+      <div class="label">Xilofon</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/ahasuerus-xerxes-esther-back.jpg"/>
+      <div class="label">Xerxe (Ahașversoș)</div>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-containerY">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/yak.jpg"/>
+      <div class="label">Yac</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/yoyo.jpg"/>
+      <div class="label">Yoyo</div>
+    </div>
+  </div>
+  <div class="picture-container" id="picture-containerZ">
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/zechariah-angel-in-temple.jpg"/>
+      <div class="label">Zaharia (primind vestea nașterii lui Ioan)</div>
+    </div>
+    <div class="lang-ro">
+      <img class="picture" src="res/pictures/zedekiah-arrested.jpg"/>
+      <div class="label">Zedechia (arestat de către babilonieni)</div>
+    </div>
+  </div>
 </div>
 
 

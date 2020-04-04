@@ -9,6 +9,7 @@ $(window).on('load', function() {
         $symbol = $('#symbol'),
         $pictureContainers = $('.picture-container'),
         $pictures = $('.picture'),
+        $labels = $('.label'),
         $switch = $('.switch'),
         $languageSwitch = $('#language-switch'),
         $langRo = $('.lang-ro'),
@@ -27,6 +28,7 @@ $(window).on('load', function() {
 
         $pictureContainers.hide();
         $pictures.hide();
+        $labels.hide();
         $langEn.hide();
 
         $window.on('keydown', onKeyPressed);
@@ -59,8 +61,8 @@ $(window).on('load', function() {
 
     function onKeyPressed(e) {
         if (isRo) {
-            $langRo.show();
             $langEn.hide();
+            $langRo.show();
         } else {
             $langRo.hide();
             $langEn.show();
@@ -69,7 +71,9 @@ $(window).on('load', function() {
         var key = e.keyCode,
             char,
             $currentImagesForLang,
+            $currentLabelsForLang,
             $currentPicture,
+            $currentLabel,
             $currentImagesContainer;
 
         if ((key >= 48 && key <= 90) || (key >= 96 && key <= 105)) {
@@ -87,10 +91,15 @@ $(window).on('load', function() {
             lastChar = char;
             $pictureContainers.hide();
             $pictures.hide();
+            $labels.hide();
             $currentImagesContainer = $('#picture-container' + char);
-            $currentImagesForLang = $currentImagesContainer.find('.lang-' + lang);
-            $currentPicture = $currentImagesForLang.eq(randomBetween(0, $currentImagesForLang.length - 1));
+            $currentImagesForLang = $currentImagesContainer.find('.lang-' + lang+' .picture');
+            $currentLabelsForLang = $currentImagesContainer.find('.lang-' + lang+' .label');
+            const imageIndex = randomBetween(0, $currentImagesForLang.length - 1);
+            $currentPicture = $currentImagesForLang.eq(imageIndex);
+            $currentLabel = $currentLabelsForLang.eq(imageIndex);
             $currentPicture.show();
+            $currentLabel.show();
             $currentImagesContainer.show();
             $symbol.css({color: getRandomColor()});
             $symbol.text(char);
