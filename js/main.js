@@ -29,14 +29,10 @@ $(window).on('load', function() {
         $pictures.hide();
         $labels.hide();
         $langEn.hide();
+        $langRo.show();
 
         $window.on('keydown', onKeyPressed);
-        $window.on('resize', onWindowResize);
         $languageSwitch.on('change', onLanguageSwitchChange);
-    }
-
-    function onWindowResize() {
-        arrangeElements();
     }
 
     function onLanguageSwitchChange() {
