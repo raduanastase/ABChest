@@ -15,6 +15,7 @@ $(window).on('load', function() {
         $langRo = $('.lang-ro'),
         $langEn = $('.lang-en'),
         $info = $('#info'),
+        $picturesContainer = $('#pictures-container'),
         lastChar = null,
         isRo = !$languageSwitch.is(':checked'),
         lang = isRo ? 'ro' : 'en';
@@ -22,8 +23,6 @@ $(window).on('load', function() {
     init();
 
     function init() {
-        arrangeElements();
-
         $loader.fadeOut('slow');
 
         $pictureContainers.hide();
@@ -36,13 +35,6 @@ $(window).on('load', function() {
         $languageSwitch.on('change', onLanguageSwitchChange);
     }
 
-    function arrangeElements() {
-        $directions.css({
-            top: $window.height() / 2 - $directions.outerHeight() / 2,
-            left: $window.width() / 2 - $directions.outerWidth() / 2
-        });
-    }
-
     function onWindowResize() {
         arrangeElements();
     }
@@ -51,23 +43,18 @@ $(window).on('load', function() {
         isRo = !isRo;
         lang = isRo ? 'ro' : 'en';
         if (isRo) {
-            $langRo.hide();
-            $langEn.hide();
-        } else {
-            $langRo.hide();
-            $langEn.hide();
-        }
-    }
-
-    function onKeyPressed(e) {
-        if (isRo) {
             $langEn.hide();
             $langRo.show();
         } else {
             $langRo.hide();
             $langEn.show();
         }
+        $directions.show();
+        $symbol.hide();
+        $picturesContainer.hide();
+    }
 
+    function onKeyPressed(e) {
         var key = e.keyCode,
             char,
             $currentImagesForLang,
@@ -81,6 +68,8 @@ $(window).on('load', function() {
             // $switch.hide();
             // $info.hide();
             $directions.hide();
+            $symbol.show();
+            $picturesContainer.show();
 
             if (lastChar && SoundMap[lang + '-' + lastChar]) SoundMap[lang + '-' + lastChar].stop();
 

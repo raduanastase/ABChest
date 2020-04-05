@@ -16,9 +16,10 @@ body {
 }
 
 #directions {
-    position: absolute;
     text-align: center;
     font-size: 10vh;
+    width: 99vw;
+    margin-top: 250px;
 }
 
 #symbol {
@@ -48,4 +49,11 @@ body {
     height: 100%;
     z-index: 9999;
     background: url('../res/images/page-loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+}
+
+.disclaimer {
+    font-size: 12px;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
 }
