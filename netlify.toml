@@ -1,0 +1,4 @@
+[[headers]]                                                                                                                                                   
+    for = "/*"                                                                                                                                                  
+    [headers.values]                                                                                                                                            
+      Content-Security-Policy = "frame-ancestors 'self' http://localhost:3000 https://hub.funbible.net https://funbible-hub.vercel.app"
